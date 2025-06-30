@@ -1,4 +1,5 @@
 <form class="flex flex-col gap-4 w-full" id="login-form">
+    {% csrf_token %}
     <fieldset>
         <legend class="label-text">Username</legend>
         <input type="text" name="username" placeholder="Username" class="input input-bordered w-full " required>
