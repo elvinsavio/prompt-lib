@@ -4,13 +4,8 @@
         <input type="text" name="username" placeholder="Username" class="input input-bordered w-full " required>
     </fieldset>
     <fieldset>
-        <legend class="label-text">OTP</legend>
-        <div class="flex gap-2 justify-center">
-            <input type="text" maxlength="3" inputmode="numeric" placeholder="000" pattern="[0-9]*" name="otp1" required
-                class="w-[30px] text-center" />
-            <input type="text" maxlength="3" inputmode="numeric" placeholder="000" pattern="[0-9]*" name="otp2" required
-                class="w-[40px] text-center text-xl" />
-            </div>
+        <legend class="label-text">Password</legend>
+        <input type="password" name="password" placeholder="Password" class="input input-bordered w-full " required>       
         </fieldset>
         {% if error %}
         <div class="flex flex-col gap-1">
