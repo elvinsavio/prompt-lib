@@ -1,0 +1,21 @@
+<form class="flex flex-col gap-4 w-full" id="login-form">
+    <fieldset>
+        <legend class="label-text">Username</legend>
+        <input type="text" name="username" placeholder="Username" class="input input-bordered w-full " required>
+    </fieldset>
+    <fieldset>
+        <legend class="label-text">OTP</legend>
+        <div class="flex gap-2 justify-center">
+            <input type="text" maxlength="3" inputmode="numeric" placeholder="000" pattern="[0-9]*" name="otp1" required
+                class="w-[30px] text-center" />
+            <input type="text" maxlength="3" inputmode="numeric" placeholder="000" pattern="[0-9]*" name="otp2" required
+                class="w-[40px] text-center text-xl" />
+            </div>
+        </fieldset>
+        {% if error %}
+        <div class="flex flex-col gap-1">
+            <span class="text-error">{{ error }}</span>
+        </div>
+        {% endif %}
+    <button type="submit" class="btn btn-primary w-full" hx-post="/login" hx-target="#login-form">Login</button>
+</form>
