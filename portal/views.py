@@ -17,7 +17,7 @@ def login(request):
             encoded_jwt = jwt.encode(
                 {'username': username}, 
                 settings.JWT_SECRET, 
-                algorithm='HS256',
+                algorithm='HS256'
             )
             response = HttpResponse()
             response['HX-Redirect'] = '/'
