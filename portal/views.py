@@ -17,7 +17,7 @@ def login(request):
             encoded_jwt = jwt.encode(
                 {'username': username}, 
                 settings.JWT_SECRET, 
-                algorithm='HS256'
+                algorithm='HS256',
             )
             response = HttpResponse()
             response['HX-Redirect'] = '/'
@@ -25,7 +25,7 @@ def login(request):
                 'token', 
                 encoded_jwt, 
                 httponly=True, 
-                expires=datetime.today() + timedelta(days=1),
+                expires=datetime.today() + timedelta(hours=1),
                 samesite='Lax',
                 secure=request.is_secure(),
             )
@@ -39,5 +39,9 @@ def login(request):
     return render(request, 'login.html')
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+def landing(request):
+    return render(request, 'landing.html')
+
+def new_project(request):
+    # Placeholder for project creation logic
+    return render(request, 'project/new.html')
