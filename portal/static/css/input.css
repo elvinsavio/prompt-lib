@@ -112,8 +112,8 @@
     background-image:
       linear-gradient(to right, var(--background) 1px, transparent 1px),
       linear-gradient(to bottom, var(--background) 1px, transparent 1px);
+    font-family: "Fira Mono", monospace;
   }
-
   h1,
   h2,
   h3,
