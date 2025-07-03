@@ -42,6 +42,15 @@ def login(request):
 def landing(request):
     return render(request, 'landing.html')
 
-def new_project(request):
+
+def library_view_all(request):
+    # Placeholder for library creation logic
+    return render(request, 'library/all.html')
+
+def library_new(request):
+    # Placeholder for library creation logic
+    return render(request, 'library/new.html')
+
+def project_new(request):
     # Placeholder for project creation logic
     return render(request, 'project/new.html')
